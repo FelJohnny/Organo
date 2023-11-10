@@ -1,0 +1,15 @@
+.Select label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.Select select{
+    background-color: #fff;
+    box-shadow: 8px 8px 16px rgba(0 ,0 ,0 ,0.5);
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
