@@ -6,7 +6,7 @@ const Select = (props) =>{
 
             <label>{props.label}</label>
 
-            <select required={props.obrigatorio} className='select'>
+            <select onChange={evento =>{ props.aoAlterado(evento.target.value)}} required={props.obrigatorio} value={props.valor}>
                 {props.itens.map(item => {
                    return <option key={item}>{item}</option>
                 } ) }

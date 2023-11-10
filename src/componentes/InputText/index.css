@@ -1,15 +1,15 @@
-.campoTexto{
+.InputText{
     margin: 24px 0;
     
 }
 
-.campoTexto label{
+.InputText label{
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
 }
 
-.campoTexto input{
+.InputText input{
     background-color: #fff;
     box-shadow: 8px 8px 16px rgba(0 ,0 ,0 ,0.5);
     border: none;

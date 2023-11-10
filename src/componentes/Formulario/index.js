@@ -1,5 +1,5 @@
 import Button from '../Button'
-import CampoTexto from '../CampoTexto'
+import InputText from '../InputText'
 import Select from '../Select'
 import './index.css'
 import { useState } from 'react'
@@ -17,39 +17,46 @@ const Formulario = () =>{
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
 
-    const aoSalvar = (event) =>{
+    const onEnvio = (event) =>{
         event.preventDefault()
-        console.log("formulario foi subetido =",nome,cargo,imagem)
+        console.log("formulario foi subetido =",nome,cargo,imagem, time)
     }
 
     return(
         <section className="formulario">
-            <form onSubmit={aoSalvar}>
+            <form onSubmit={onEnvio}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto 
+                <InputText 
                     obrigatorio={true}
                     label="Nome"
                     placeholder="digite o seu nome"
                     valor = {nome}
-                    aoAlterado={valor =>setNome(valor)}
+                    aoAlterado={valor => setNome(valor)}
                 />
-                <CampoTexto 
+                <InputText 
                     obrigatorio={true}
                     label="Cargo"
                     placeholder="digite o seu cargo"
                     valor = {cargo}
                     aoAlterado={valor =>setCargo(valor)}
                 />
-                <CampoTexto
+                <InputText
                     obrigatorio={true}
                     label="Imagem"
                     placeholder="digite o endereço da sua imagem"
                     valor = {imagem}
                     aoAlterado={valor =>setImagem(valor)}
                 />
-                <Select obrigatorio={true} label="Setores" itens={times}/>
+                <Select
+                    obrigatorio={true}
+                    label="Setores" 
+                    itens={times}
+                    valor={time}
+                    aoAlterado={valor =>setTime(valor)}
+                />
                 <Button texto="criar card"/>
             </form>
         </section>

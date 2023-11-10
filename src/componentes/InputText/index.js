@@ -1,5 +1,5 @@
 import './index.css'
-const CampoTexto = (props)=>{
+const InputText = (props)=>{
 
     const aoDigitado = (evento) =>{
         props.aoAlterado(evento.target.value)
@@ -7,11 +7,11 @@ const CampoTexto = (props)=>{
     }
 
     return(
-        <div className="campoTexto">
+        <div className="InputText">
             <label>{props.label}</label>
             <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder}></input>
         </div>
     )
 }
 
-export default CampoTexto
+export default InputText
