@@ -12,6 +12,7 @@ const Formulario = (props) =>{
         'DevOps',
         'UX e Design',
         'Mobile',
+        'Inovação e Gestão'
     ]
 
     const [nome, setNome] = useState('')
