@@ -4,7 +4,7 @@ import Select from '../Select'
 import './index.css'
 import { useState } from 'react'
 
-const Formulario = () =>{
+const Formulario = (props) =>{
 
     const times = [
         'Programação',
@@ -21,8 +21,14 @@ const Formulario = () =>{
 
 
     const onEnvio = (event) =>{
-        event.preventDefault()
         console.log("formulario foi subetido =",nome,cargo,imagem, time)
+        event.preventDefault()
+        props.onColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return(
@@ -34,30 +40,31 @@ const Formulario = () =>{
                     label="Nome"
                     placeholder="digite o seu nome"
                     valor = {nome}
-                    aoAlterado={valor => setNome(valor)}
+                    aoAlterado={valorEscrito => setNome(valorEscrito)}
                 />
                 <InputText 
                     obrigatorio={true}
                     label="Cargo"
                     placeholder="digite o seu cargo"
                     valor = {cargo}
-                    aoAlterado={valor =>setCargo(valor)}
+                    aoAlterado={valorEscrito =>setCargo(valorEscrito)}
                 />
                 <InputText
                     obrigatorio={true}
                     label="Imagem"
                     placeholder="digite o endereço da sua imagem"
                     valor = {imagem}
-                    aoAlterado={valor =>setImagem(valor)}
+                    aoAlterado={valorEscrito =>setImagem(valorEscrito)}
                 />
                 <Select
                     obrigatorio={true}
                     label="Setores" 
                     itens={times}
                     valor={time}
-                    aoAlterado={valor =>setTime(valor)}
+                    aoAlterado={valorSelecionado =>setTime(valorSelecionado)}
                 />
                 <Button texto="criar card"/>
+                <p>{time}</p>
             </form>
         </section>
     )
