@@ -6,14 +6,7 @@ import { useState } from 'react'
 
 const Formulario = (props) =>{
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
+
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -60,7 +53,7 @@ const Formulario = (props) =>{
                 <Select
                     obrigatorio={true}
                     label="Setores" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valorSelecionado =>setTime(valorSelecionado)}
                 />
