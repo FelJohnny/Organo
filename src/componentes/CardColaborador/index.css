@@ -1,0 +1,30 @@
+.CardColaborador{
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.8);
+    margin: 10px;
+}
+
+.CardColaborador div:first-child{
+    display: flex;
+    justify-content: center;
+    background-color: teal;
+    height: 60px;
+    padding-top: 20px;
+    
+}
+.CardColaborador div:first-child img{
+    position: absolute;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.CardColaborador h4{
+    padding-top: 20px;
+    color: rgb(59, 140, 216);
+}
+
+.CardColaborador h5{
+    font-weight: 400;
+
+}

@@ -36,6 +36,7 @@ function App() {
       corPrimaria: '#ff8a29',
       corSecundaria: '#ffeedf'
     },
+    
   ]
 
   const[colaboradores, setColaboradores] = useState([])
@@ -43,9 +44,8 @@ function App() {
   const onColaboradorAdicionado = (colaborador) =>{
     console.log(colaborador)
     setColaboradores([...colaboradores, colaborador]) //pega todos itens da array coloca antes, "colaboradores" adiciona no final
-    console.log(colaboradores)
-
   }
+
   return (
     <div className="App">
       <Banner/>

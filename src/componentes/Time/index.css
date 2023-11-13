@@ -10,3 +10,12 @@
     display: inline-block;
     padding-bottom: 8px;
 }
+
+.containerColaborador{
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
