@@ -1,6 +1,6 @@
 import './index.css'
 
-const CardColaborador = (props) =>{
+const CardColaborador = (props, colorCard) =>{
     return(
         <div className='CardColaborador'>
             <div>

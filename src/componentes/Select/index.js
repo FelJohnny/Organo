@@ -12,6 +12,7 @@ const Select = (props) =>{
             <label>{props.label}</label>
 
             <select onChange={aoSelecionar} required={props.obrigatorio} value={props.valor}>
+                <option value="" placeholder='Selecione o seu Time'></option>
                 {props.itens.map(item => {
                    return <option key={item}>{item}</option>
                 } ) }
