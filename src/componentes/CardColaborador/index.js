@@ -1,14 +1,14 @@
 import './index.css'
 
-const CardColaborador = () =>{
+const CardColaborador = (props) =>{
     return(
         <div className='CardColaborador'>
             <div>
-                <img src="https://github.com/FelJohnny.png" alt="" />
+                <img src={props.imagem} alt={props.nome} />
             </div>
             <div>
-                <h4>Johnny</h4>
-                <h5>Analista de T.I</h5>
+                <h4>{props.nome}</h4>
+                <h5>{props.cargo}</h5>
             </div>
         </div>
     )
