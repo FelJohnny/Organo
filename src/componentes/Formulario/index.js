@@ -15,7 +15,6 @@ const Formulario = (props) =>{
 
 
     const onEnvio = (event) =>{
-        console.log("formulario foi subetido =",nome,cargo,imagem, time)
         event.preventDefault()
         props.onColaboradorCadastrado({
             nome,

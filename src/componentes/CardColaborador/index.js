@@ -1,8 +1,9 @@
 import './index.css'
 
-const CardColaborador = (props, colorCard) =>{
+const CardColaborador = (props) =>{
     return(
         <div className='CardColaborador'>
+            <div className='btn-deletar' onClick={props.onDelete}>X</div>
             <div>
                 <img src={props.imagem} alt={props.nome} />
             </div>

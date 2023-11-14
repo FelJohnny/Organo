@@ -42,10 +42,12 @@ function App() {
   const[colaboradores, setColaboradores] = useState([])
 
   const onColaboradorAdicionado = (colaborador) =>{
-    console.log(colaborador)
     setColaboradores([...colaboradores, colaborador]) //pega todos itens da array coloca antes, "colaboradores" adiciona no final
   }
 
+  function detelarColaborador(){
+     colaboradores.map(colaborador => console.log(<Time key={colaborador.nome} /> ) )
+  }
   return (
     <div className="App">
       <Banner/>
@@ -57,6 +59,7 @@ function App() {
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        onDelete={detelarColaborador}
         />)}
       
     </div>

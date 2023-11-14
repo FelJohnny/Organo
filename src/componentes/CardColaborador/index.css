@@ -3,10 +3,36 @@
     border-radius: 10px;
     box-shadow: 8px 8px 16px rgba(0,0,0,0.8);
     margin: 10px;
+    position: relative;
+}
+
+.btn-deletar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(216, 22, 22);
+    color: white;
     cursor: pointer;
 }
 
-.CardColaborador div:first-child{
+.btn-deletar:hover{
+    background: rgb(189, 72, 72);
+}
+
+.btn-deletar:active{
+    background: rgb(122, 6, 6);
+}
+
+
+.CardColaborador div:nth-child(2){
     display: flex;
     justify-content: center;
     background-color: teal;
@@ -14,7 +40,7 @@
     padding-top: 20px;
     
 }
-.CardColaborador div:first-child img{
+.CardColaborador div:nth-child(2) img{
     position: absolute;
     width: 100px;
     border-radius: 50%;
