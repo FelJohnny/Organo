@@ -9,7 +9,8 @@ const Time =(props) =>{
             <div className='containerColaborador'>
                 {props.colaboradores.map(colaborador => {
                     return(
-                        <CardColaborador 
+                        <CardColaborador
+                            id={props.id}
                             key={colaborador.nome}
                             colorCard={props.corPrimaria}  
                             nome={colaborador.nome} 

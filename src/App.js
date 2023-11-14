@@ -39,14 +39,18 @@ function App() {
     
   ]
 
+  
   const[colaboradores, setColaboradores] = useState([])
-
+  
   const onColaboradorAdicionado = (colaborador) =>{
     setColaboradores([...colaboradores, colaborador]) //pega todos itens da array coloca antes, "colaboradores" adiciona no final
   }
+  
+  
 
-  function detelarColaborador(){
-     colaboradores.map(colaborador => console.log(<Time key={colaborador.nome} /> ) )
+  function detelarColaborador(cargo){
+    //console.log(evento.target.offsetParent.remove())
+    console.log(cargo)
   }
   return (
     <div className="App">
@@ -54,6 +58,7 @@ function App() {
       <Formulario times={times.map((time) => time.nome )  } onColaboradorCadastrado={colaborador => onColaboradorAdicionado(colaborador)}/>
       
       {times.map(time => <Time 
+        id={colaboradores.map((colab,index) => index)}
         key={time.nome}
         nome={time.nome} 
         corPrimaria={time.corPrimaria}
