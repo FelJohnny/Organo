@@ -12,10 +12,17 @@
 }
 
 .containerColaborador{
-    
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+
+}
+
+.defCorBackground{
+    position:absolute;
+    right: 30px;
+    cursor: pointer;
 }
