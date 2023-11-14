@@ -48,24 +48,28 @@ function App() {
   
   
 
-  function detelarColaborador(cargo){
-    //console.log(evento.target.offsetParent.remove())
-    console.log(cargo)
+  function detelarColaborador(idColaborador){
+    setColaboradores(colaboradores.filter(colaborador => colaborador.idColaborador !== idColaborador))
   }
   return (
     <div className="App">
       <Banner/>
-      <Formulario times={times.map((time) => time.nome )  } onColaboradorCadastrado={colaborador => onColaboradorAdicionado(colaborador)}/>
       
-      {times.map(time => <Time 
-        id={colaboradores.map((colab,index) => index)}
+      <Formulario 
+        times={times.map((time) => time.nome)}
+        onColaboradorCadastrado={colaborador => onColaboradorAdicionado(colaborador)}
+      />
+      
+      {times.map(time => 
+      <Time
         key={time.nome}
         nome={time.nome} 
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
         onDelete={detelarColaborador}
-        />)}
+      
+      />)}
       
     </div>
   );

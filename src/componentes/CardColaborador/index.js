@@ -5,7 +5,7 @@ const CardColaborador = (props) =>{
         <div className='CardColaborador'>
             <div 
                 className='btn-deletar'
-                onClick={props.onDelete(props.cargo)}
+                onClick={()=> props.onDelete(props.idColaborador)}
             >X</div>
 
             <div>

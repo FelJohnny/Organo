@@ -3,6 +3,7 @@ import InputText from '../InputText'
 import Select from '../Select'
 import './index.css'
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 const Formulario = (props) =>{
 
@@ -17,12 +18,12 @@ const Formulario = (props) =>{
     const onEnvio = (event) =>{
         event.preventDefault()
         props.onColaboradorCadastrado({
+            idColaborador: uuidv4(),
             nome,
             cargo,
             imagem,
             time
         })
-
         setTime('')
         setCargo('')
         setImagem('')

@@ -10,7 +10,7 @@ const Time =(props) =>{
                 {props.colaboradores.map(colaborador => {
                     return(
                         <CardColaborador
-                            id={props.id}
+                            idColaborador={colaborador.idColaborador}
                             key={colaborador.nome}
                             colorCard={props.corPrimaria}  
                             nome={colaborador.nome} 
