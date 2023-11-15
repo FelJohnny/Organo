@@ -22,6 +22,7 @@ const Formulario = (props) =>{
         event.preventDefault()
         props.onColaboradorCadastrado({
             idColaborador: uuidv4(),
+            favorito: false,
             nome,
             cargo,
             imagem,
@@ -89,7 +90,7 @@ const onCadTime = (event) =>{
                 </form>
             </section>
 
-                    <section className="formulario">
+            <section className="formulario">
                 <form onSubmit={onCadTime}>
                     <h2>Preencha os dados para Cadastrar um novo Time</h2>
                     <InputText 

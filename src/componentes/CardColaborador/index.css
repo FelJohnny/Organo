@@ -53,3 +53,13 @@
     font-weight: 400;
 
 }
+
+
+.favoritar{
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.favoritar:first-child{
+    height: 100px;
+}

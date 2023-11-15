@@ -79,6 +79,13 @@ function App() {
   function cadastrarTime(novoTime){
     setTimes([...times, {...novoTime, id: uuidv4()}])
   }
+
+  function Favoritar(idColaborador) {
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.idColaborador === idColaborador) colaborador.favorito = !colaborador.favorito;
+      return colaborador;
+    }))
+  }
   return (
     <div className="App">
       <Banner/>
@@ -86,7 +93,6 @@ function App() {
       <Formulario
         cadastrarTime={cadastrarTime}
         times={times.map((time) => time.nome)}
-        
         onColaboradorCadastrado={colaborador => setColaboradores([...colaboradores, colaborador])}
       />
       
@@ -94,6 +100,7 @@ function App() {
       <Time
         idTime={time.idTime}
         key={time.nome}
+        favoritar={Favoritar}
         mudarCorCard={mudarCorCard}
         mudarCorTime={mudarCorTime}
         nome={time.nome} 
