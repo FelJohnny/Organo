@@ -24,12 +24,13 @@
 .defCorCard{
     position:absolute;
     right: 30px;
+    width: 35px;
     cursor: pointer;
 }
 
 .defCorBackground{
     position:absolute;
     right: 100px;
-    
+    width: 35px;
     cursor: pointer;
 }

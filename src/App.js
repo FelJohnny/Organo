@@ -51,9 +51,9 @@ function App() {
   
   const[colaboradores, setColaboradores] = useState([])
   
-  const onColaboradorAdicionado = (colaborador) =>{
-    setColaboradores([...colaboradores, colaborador]) //pega todos itens da array coloca antes, "colaboradores" adiciona no final
-  }
+  // const onColaboradorAdicionado = (colaborador) =>{
+  //   setColaboradores([...colaboradores, colaborador]) //pega todos itens da array coloca antes, "colaboradores" adiciona no final
+  // }
   
   function detelarColaborador(idColaborador){
     setColaboradores(colaboradores.filter(colaborador => colaborador.idColaborador !== idColaborador))
@@ -76,13 +76,18 @@ function App() {
       return time;
     } ) )
   }
+
+  function cadastrarTime(novoTime){
+    setTimes([...times, {...novoTime}])
+  }
   return (
     <div className="App">
       <Banner/>
       
-      <Formulario 
+      <Formulario
+        cadastrarTime={cadastrarTime}
         times={times.map((time) => time.nome)}
-        onColaboradorCadastrado={colaborador => onColaboradorAdicionado(colaborador)}
+        onColaboradorCadastrado={colaborador => setColaboradores([...colaboradores, colaborador])}
       />
       
       {times.map(time => 
