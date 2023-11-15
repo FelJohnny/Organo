@@ -29,4 +29,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    justify-content: center;
+}
+
+.containerInput input{
+    width: 50px;
+    padding: 0px;
+    border-radius:5px ;
 }

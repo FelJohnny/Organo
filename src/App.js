@@ -47,7 +47,6 @@ function App() {
     },
     
   ])
-
   
   const[colaboradores, setColaboradores] = useState([])
   
@@ -78,7 +77,7 @@ function App() {
   }
 
   function cadastrarTime(novoTime){
-    setTimes([...times, {...novoTime}])
+    setTimes([...times, {...novoTime, id: uuidv4()}])
   }
   return (
     <div className="App">
@@ -87,6 +86,7 @@ function App() {
       <Formulario
         cadastrarTime={cadastrarTime}
         times={times.map((time) => time.nome)}
+        
         onColaboradorCadastrado={colaborador => setColaboradores([...colaboradores, colaborador])}
       />
       

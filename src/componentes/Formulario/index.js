@@ -35,7 +35,7 @@ const Formulario = (props) =>{
 const onCadTime = (event) =>{
     event.preventDefault()
     props.cadastrarTime({
-        id: uuidv4(),
+        idTime: uuidv4(),
         nome: nomeTime,
         corPrimaria: corTime,
         corSecundaria: corCard,
@@ -54,6 +54,7 @@ const onCadTime = (event) =>{
                         obrigatorio={true}
                         label="Nome"
                         placeholder="digite o seu nome"
+                        type='text'
                         valor = {nome}
                         aoAlterado={valorEscrito => setNome(valorEscrito)}
                     />
@@ -61,6 +62,7 @@ const onCadTime = (event) =>{
                         obrigatorio={true}
                         label="Cargo"
                         placeholder="digite o seu cargo"
+                        type='text'
                         valor = {cargo}
                         aoAlterado={valorEscrito =>setCargo(valorEscrito)}
                     />
@@ -68,6 +70,7 @@ const onCadTime = (event) =>{
                         obrigatorio={true}
                         label="Imagem URL"
                         placeholder="digite o endereço da sua imagem"
+                        type='text'
                         valor = {imagem}
                         aoAlterado={valorEscrito =>setImagem(valorEscrito)}
                     />
@@ -101,6 +104,7 @@ const onCadTime = (event) =>{
                             //obrigatorio={true}
                             label="Cor de fundo"
                             placeholder="digite a cor do Time #hexadecimal"
+                            type='color'
                             valor = {corTime}
                             aoAlterado={valorEscrito =>setCorTime(valorEscrito)}
                         />
@@ -109,6 +113,7 @@ const onCadTime = (event) =>{
                             label="Cor do Card"
                             placeholder="digite a cor do Card #hexadecimal"
                             valor = {corCard}
+                            type='color'
                             aoAlterado={valorEscrito =>setCorCard(valorEscrito)}
                         />
                     </div>
