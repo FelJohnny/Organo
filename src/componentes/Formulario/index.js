@@ -42,7 +42,7 @@ const onCadTime = (event) =>{
     })
     setNomeTime('')
     setCorTime('')
-    setCorTime('')
+    setCorCard('')
 }
 
     return(
