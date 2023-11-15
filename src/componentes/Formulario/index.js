@@ -55,6 +55,9 @@ const Formulario = (props) =>{
                     valor = {imagem}
                     aoAlterado={valorEscrito =>setImagem(valorEscrito)}
                 />
+                <div className='containerImg'>
+                    <img src={imagem} alt={nome} className='imgInserida'/>
+                </div>
                 <Select
                     obrigatorio={true}
                     label="Setores" 
@@ -63,7 +66,7 @@ const Formulario = (props) =>{
                     aoAlterado={valorSelecionado =>setTime(valorSelecionado)}
                 />
                 <Button texto="criar card"/>
-                <p>{time}</p>
+
             </form>
         </section>
     )

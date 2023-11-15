@@ -21,8 +21,15 @@
 
 }
 
-.defCorBackground{
+.defCorCard{
     position:absolute;
     right: 30px;
+    cursor: pointer;
+}
+
+.defCorBackground{
+    position:absolute;
+    right: 100px;
+    
     cursor: pointer;
 }

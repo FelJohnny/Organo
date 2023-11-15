@@ -13,3 +13,14 @@
     box-shadow: 8px 8px 16px rgba(0,0,0,0.8);
 
 }
+
+.containerImg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.imgInserida{
+    width: 150px;
+    border-radius: 50%;
+}
